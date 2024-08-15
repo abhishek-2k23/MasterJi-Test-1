@@ -2,4 +2,8 @@
 @tailwind components;
 @tailwind utilities;
 
+/* font for random-user */
 @import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=DM+Serif+Text:ital@0;1&family=Donegal+One&display=swap');
+
+/* font for random-jokes */
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');

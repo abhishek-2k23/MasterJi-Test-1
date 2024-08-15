@@ -6,7 +6,8 @@ module.exports = {
       fontFamily: {
         donegal: ['Donegal One', 'serif'],
         dmserif: ['DM Serif', 'serif'],
-        dmsans: ['DM Sans', 'serif']
+        dmsans: ['DM Sans', 'serif'],
+        inter: ['inter','serif'],
       }
     },
   },
