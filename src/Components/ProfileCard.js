@@ -9,6 +9,7 @@ import { LuCopyright } from "react-icons/lu"
 import { formatDate } from "../utility/helpers.js"
 import Flag from "react-flagkit"
 import ChaiLogo from "./ChaiLogo.js"
+import RandomUserShimmer from "./RandomUserShimmer.js"
 
 function ProfileCard() {
   const [userData, setUserData] = useState(null)
@@ -54,7 +55,7 @@ const getCountryCode = async(countryName) =>{
   }, [userData])
 
   if (userData === null) {
-    return <div className="text-white">Loading</div>
+    return <RandomUserShimmer/>
   }
   return (
     <div className="text-black text-opacity-70 w-[358px] bg-[#B6B3F3] h-[610px] border-8  border-white p-4 rounded-xl flex flex-col items-center gap-5 font-dmsans">
