@@ -1,7 +1,6 @@
 import React from "react"
 import { useState } from "react"
 import { useEffect } from "react"
-import chai from "../Asset/chai.png"
 import { IoCallOutline } from "react-icons/io5"
 import { SlLocationPin } from "react-icons/sl"
 import { FaArrowLeft } from "react-icons/fa"
@@ -9,6 +8,7 @@ import { IoMdRefresh } from "react-icons/io"
 import { LuCopyright } from "react-icons/lu"
 import { formatDate } from "../utility/helpers.js"
 import Flag from "react-flagkit"
+import ChaiLogo from "./ChaiLogo.js"
 
 function ProfileCard() {
   const [userData, setUserData] = useState(null)
@@ -29,9 +29,6 @@ function ProfileCard() {
     }
 
     console.log(userdata)
-  }
-  const loadChaiCode = () => {
-    window.open("https://chaicode.com/", "_blank")
   }
 
   const loadNewTab = () => {
@@ -179,12 +176,7 @@ const getCountryCode = async(countryName) =>{
           <LuCopyright />
           <p>chai aur code</p>
         </div>
-        <div
-          className="ml-6 w-[60px] h-[62px] rounded-xl bg-black cursor-pointer"
-          onClick={loadChaiCode}
-        >
-          <img src={chai} alt="chaicode" className="rounded-xl" />
-        </div>
+        <ChaiLogo />
       </div>
     </div>
   )
