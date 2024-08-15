@@ -1,70 +1,70 @@
-# Getting Started with Create React App
+# Assignment: React Components with FreeAPI.app Integration
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This assignment showcases the development of three distinct tasks using React, based on the provided Figma designs. The tasks involve API integration with FreeAPI.app, focusing on implementing Random User Profile, Random Jokes Tweet, and Cats Listing components.
 
-## Available Scripts
+## Live URL 
+- [https://master-ji-test-1.vercel.app/]
 
-In the project directory, you can run:
+## Table of Contents
+- [Task 1: Random User Profile](#task-1-random-user-profile)
+- [Task 2: Random Jokes Tweet](#task-2-random-jokes-tweet)
+- [Task 3: Cats Listing](#task-3-cats-listing)
+- [Project Structure](#project-structure)
+- [Installation](#installation)
+- [Usage](#usage)
+- [Screenshots](#screenshots)
+- [API References](#api-references)
 
-### `npm start`
+## Task 1: Random User Profile
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+### Description
+- **Component Styling**: The Random User Profile component matches the design provided in Figma.
+- **Refresh Button**: A refresh button is implemented to fetch a new set of random user data.
+- **Loading State**: A creative loading state is displayed while fetching data.
+- **API Data Mapping**: API response fields are mapped precisely as per the Figma design.
+- **Hyperlinks**: Location and call actions are hyperlinked to open in a new tab.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+### API Endpoint
+- [Random User API](https://api.freeapi.app/api/v1/public/randomusers/user/random)
 
-### `npm test`
+### Screenshots
+![Random User Profile](./src/Asset/screenshots/randomuser.png)
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## Task 2: Random Jokes Tweet
 
-### `npm run build`
+### Description
+- **Static Author Details**: The tweet author details are kept static (e.g., Elon Musk).
+- **Random Analytics**: Timestamp, views, date, and other analytics are randomly generated.
+- **Loading State**: A creative loading state is implemented during data fetch.
+- **Auto-Refresh**: On page reload, the tweet card content is updated with new joke data.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+### API Endpoint
+- [Random Jokes API](https://api.freeapi.app/api/v1/public/randomjokes/joke/random)
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+### Screenshots
+![Random Jokes Tweet](./src/Asset/screenshots/twitter.png)
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## Task 3: Cats Listing
 
-### `npm run eject`
+### Description
+- **Horizontal Scrolling Cards**: A paginated list of horizontally scrolling cards is implemented to display cats information.
+- **Loading State**: A creative loading state is shown while fetching data.
+- **Pagination**: Pagination is handled effectively to list all cats from the database.
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+### API Endpoint
+- [Cats Listing API](https://api.freeapi.app/api/v1/public/cats?page=1&limit=4)
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+### Screenshots
+![Cats Listing](./src/Asset/screenshots/catslist.png)
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+## Project Structure
+- `/random-user`: Displays the Random User Profile component.
+- `/random-jokes`: Displays the Random Jokes Tweet component.
+- `/cats-listing`: Displays the Cats Listing component.
+- `/`: Redirects to `/random-user`.
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+## Installation
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/yourusername/yourrepository.git
 
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
