@@ -9,6 +9,8 @@ function Jokes() {
       backgroundSize: 'cover', // Cover the entire div
       backgroundPosition: 'center', // Center the image
     }}>
+      
+<div className='absolute inset-0 bg-gray-500 opacity-50'></div>
       <div className='w-full h-full flex justify-center items-center z-10'>
         <RandomJokes />
       </div>
