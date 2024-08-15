@@ -2,7 +2,13 @@
 module.exports = {
   content: ["./src/**/*.{html,js}"],
   theme: {
-    extend: {},
+    extend: {
+      fontFamily: {
+        donegal: ['Donegal One', 'serif'],
+        dmserif: ['DM Serif', 'serif'],
+        dmsans: ['DM Sans', 'serif']
+      }
+    },
   },
   plugins: [],
 }

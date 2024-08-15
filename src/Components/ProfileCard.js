@@ -7,6 +7,7 @@ import { SlLocationPin } from "react-icons/sl";
 import { FaArrowLeft } from "react-icons/fa";
 import { IoMdRefresh } from "react-icons/io";
 import { LuCopyright } from "react-icons/lu";
+import { formatDate } from '../utility/DateFormat';
 
 function ProfileCard() {
     const [userData, setUserData] = useState(null);
@@ -37,11 +38,11 @@ function ProfileCard() {
         )
     }
   return (
-    <div className='text-black text-opacity-70 w-[358px] bg-[#B6B3F3] h-[610px] border-8  border-white p-4 rounded-xl flex flex-col items-center gap-5'>
+    <div className='text-black text-opacity-70 w-[358px] bg-[#B6B3F3] h-[610px] border-8  border-white p-4 rounded-xl flex flex-col items-center gap-5 font-dmsans'>
             
-            <div className='flex justify-between items-center w-full font-semibold'>
+            <div className='flex justify-between items-center w-full font-semibold '>
                 <div><FaArrowLeft /></div>
-                <div className='h-[22px] text-center'>
+                <div className='h-[22px] text-center font-dmserif font-semibold'>
                     <p >Profile Overview</p>
                 </div>
                 <div  onClick={loadUser}><IoMdRefresh className='text-lg'/></div>
@@ -57,11 +58,11 @@ function ProfileCard() {
 
             {/* name  */}
             <div>
-                <p className='text-2xl font-[400]'>{userData?.name?.first + ' ' + userData?.name?.last} </p>
+                <p className='text-2xl font-[400] font-donegal'>{userData?.name?.first + ' ' + userData?.name?.last} </p>
             </div> 
             {/* username  */}
             <div>
-                <p className='text-2xl font-[400]'>{userData?.login?.username} </p>
+                <p className='text-xs font-[400]'>{userData?.login?.username} </p>
             </div> 
 
             {/* button */}
@@ -88,32 +89,32 @@ function ProfileCard() {
             <div className='flex items-center  w-full'>
                 <div className='flex flex-col gap-1 w-[55%]'>
                     <div className='text-[9px] font-[400]'>City</div>
-                    <div className='text-[18px] font-[400] text-opacity-70 capitalize'>{userData?.location?.city}</div>
+                    <div className='text-[18px] text-opacity-70 capitalize font-dmserif font-semibold'>{userData?.location?.city}</div>
                 </div>
                 <div className='flex flex-col gap-1 '>
                     <div className='text-[9px] font-[400]'>Nationality</div>
-                    <div className='text-[18px] font-[400] text-opacity-70 capitalize'>{userData?.location?.country}</div>
+                    <div className='text-[18px]  text-opacity-70 capitalize font-dmserif font-semibold'>{userData?.location?.country}</div>
                 </div>
             </div>
             <div className='flex items-center  w-full'>
                 <div className='flex flex-col gap-1 w-[55%]'>
                     <div className='text-[9px] font-[400]'>Date of birth</div>
-                    <div className='text-[18px] font-[400] text-opacity-70 capitalize'>{userData?.dob?.date.substring(0,10)}</div>
+                    <div className='text-[18px] text-opacity-70 capitalize font-dmserif font-semibold'>{formatDate(userData?.dob?.date.substring(0,10))}</div>
                 </div>
                 <div className='flex flex-col gap-1 '>
                     <div className='text-[9px] font-[400]'>Phone No.</div>
-                    <div className='text-[18px] font-[400] text-opacity-70 capitalize'>{userData?.phone}</div>
+                    <div className='text-[18px]  text-opacity-70 capitalize font-dmserif font-semibold'>{userData?.phone}</div>
                 </div>
             </div>
 
             <div className='flex items-center  w-full'>
                 <div className='flex flex-col gap-1 w-[55%]'>
                     <div className='text-[9px] font-[400]'>Time Zone</div>
-                    <div className='text-[18px] font-[400] text-opacity-70 capitalize'>{userData?.location?.timezone?.offset}</div>
+                    <div className='text-[18px]  text-opacity-70 capitalize font-dmserif font-semibold'>{userData?.location?.timezone?.offset}</div>
                 </div>
                 <div className='flex flex-col gap-1 '>
                     <div className='text-[9px] font-[400]'>Registered Since</div>
-                    <div className='text-[18px] font-[400] text-opacity-70 capitalize'>{userData?.location?.country}</div>
+                    <div className='text-[18px] text-opacity-70 capitalize font-dmserif font-semibold'>{formatDate(userData?.registered?.date?.substring(0,10))}</div>
                 </div>
             </div>
 
