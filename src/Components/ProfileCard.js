@@ -6,6 +6,7 @@ import { IoCallOutline } from "react-icons/io5";
 import { SlLocationPin } from "react-icons/sl";
 import { FaArrowLeft } from "react-icons/fa";
 import { IoMdRefresh } from "react-icons/io";
+import { LuCopyright } from "react-icons/lu";
 
 function ProfileCard() {
     const [userData, setUserData] = useState(null);
@@ -19,8 +20,13 @@ function ProfileCard() {
     console.log(userdata);
 }
     const loadChaiCode = () =>{
-        
+        window.open('https://chaicode.com/', '_blank')
     }
+
+    const loadNewTab = () =>{
+        window.open('about:blank', '_blank')
+    }
+
     useEffect(() => {
         loadUser();
     },[])
@@ -33,34 +39,35 @@ function ProfileCard() {
   return (
     <div className='text-black text-opacity-70 w-[358px] bg-[#B6B3F3] h-[610px] border-8  border-white p-4 rounded-xl flex flex-col items-center gap-5'>
             
-            <div className='flex justify-between items-center w-full'>
+            <div className='flex justify-between items-center w-full font-semibold'>
                 <div><FaArrowLeft /></div>
-                <div className='w-[117px] h-[22px] text-center'>
+                <div className='h-[22px] text-center'>
                     <p >Profile Overview</p>
                 </div>
-                <div><IoMdRefresh/></div>
+                <div  onClick={loadUser}><IoMdRefresh className='text-lg'/></div>
             </div>
 
             {/* image  */}
             <div className='relative w-[100px] h-[100px] '>
                 <img src={userData?.picture?.medium}  alt='profile pic' className='rounded-full w-[100px] h-[100px] shadow-md'/>
                 <div className='absolute -right-3 -top-2 bg-black w-[22px] h-[15px] rounded-xl text-white'>
-                    <p className='text-[10px] text-center'>{userData?.name?.title}</p>
+                    <p className='text-[10px] text-center'>{userData?.name?.title.substring(0,2)}</p>
                 </div>
             </div>
 
             {/* name  */}
-            <div >
+            <div>
                 <p className='text-2xl font-[400]'>{userData?.name?.first + ' ' + userData?.name?.last} </p>
             </div> 
             {/* username  */}
-            <div >
+            <div>
                 <p className='text-2xl font-[400]'>{userData?.login?.username} </p>
             </div> 
 
             {/* button */}
             <div className='flex gap-1 items-center'>
                 {/* location */}
+
                 <div className='bg-black w-[22px] h-[22px] rounded-full text-white flex justify-center items-center'>
                     <SlLocationPin className='align-middle'/>
                 </div>
@@ -112,10 +119,11 @@ function ProfileCard() {
 
             {/* footer  */}
             <div className='w-full flex justify-end items-end text-white'>
-                <div className='mr-7 w-[61px] '>
-                    <p className='text-[8px] font-[700]'>chai aur code</p>
+                <div className='mr-8 flex  items-center gap-1 text-[8px] font-[700]'>
+                    <LuCopyright/>
+                    <p >chai aur code</p>
                 </div>
-                <div className='ml-6 w-[60px] h-[62px] rounded-xl bg-black' onClick={loadChaiCode}>
+                <div className='ml-6 w-[60px] h-[62px] rounded-xl bg-black cursor-pointer' onClick={loadChaiCode}>
                     <img src={chai} alt='chaicode' className='rounded-xl'/>
                 </div>
             </div>
