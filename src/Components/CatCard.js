@@ -32,11 +32,11 @@ function CatCard({ catData }) {
 
         <div className="align-middle space-x-5 flex ">
           <p className="italic">origin</p>
-          <p>Russia</p>
+          <p>{origin}</p>
         </div>
 
         <p className="italic text-[14px] font-[500]">Temprament</p>
-        <div className="flex gap-3 flex-wrap ">
+        <div className="flex gap-3 flex-nowrap overflow-hidden">
           {temperamentData?.map((tempermentString, index) => {
             return (
               <div
