@@ -44,7 +44,7 @@ function RandomJokes() {
     return <div>Loading</div>
   }
   return (
-    <div className="w-[524px] min-h-[273px] max-auto rounded-xl bg-black drop-shadow font-inter p-5 text-white space-y-2">
+    <div className="w-[524px]  max-auto rounded-xl bg-black drop-shadow font-inter p-5 text-white space-y-2">
       {/* header */}
       <div className="flex gap-3 items-center">
         <div>
@@ -56,7 +56,7 @@ function RandomJokes() {
       {/* UserInfo */}
       <div className="flex justify-between items-start">
         <div className="flex gap-1 ">
-          <img src={elon} className="w-[45px] h-[45px] rounded-full" />
+          <img src={elon} alt='elon' className="w-[45px] h-[45px] rounded-full" />
           <div className="flex flex-col ">
             <div className="flex items-center">
               <p>Elon Musk</p>

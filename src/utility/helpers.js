@@ -36,7 +36,7 @@ export function formatDate(dateString) {
   }
   
   export function generateRandomData() {
-    const v = `${getRandomInt(1, 9)}.${getRandomInt(1, 9)}K`;
+    const v = `${getRandomInt(1, 9)}.${getRandomInt(1, 9)}M`;
     const l = `${getRandomInt(1, 9)}.${getRandomInt(1, 9)}K`;
     const re = `${getRandomInt(1, 9)}.${getRandomInt(1, 9)}K`;
     const c = `${getRandomInt(1, 9)}.${getRandomInt(1, 9)}K`;
