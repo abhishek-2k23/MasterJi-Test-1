@@ -9,6 +9,7 @@ This assignment showcases the development of three distinct tasks using React, b
 - [Task 1: Random User Profile](#task-1-random-user-profile)
 - [Task 2: Random Jokes Tweet](#task-2-random-jokes-tweet)
 - [Task 3: Cats Listing](#task-3-cats-listing)
+- [Styling](#stying)
 - [Project Structure](#project-structure)
 - [Installation](#installation)
 - [Usage](#usage)
@@ -57,6 +58,9 @@ This assignment showcases the development of three distinct tasks using React, b
 ### Screenshots
 ![Cats Listing](./src/Asset/screenshots/catslist.png)
 
+## Styling
+- For the styling Tailwind Css is used
+- For the fonts Google Fonts are used
 ## Project Structure
 - `/random-user`: Displays the Random User Profile component.
 - `/random-jokes`: Displays the Random Jokes Tweet component.
