@@ -9,7 +9,7 @@ import { LuCopyright } from "react-icons/lu"
 import { formatDate } from "../utility/helpers.js"
 import Flag from "react-flagkit"
 import ChaiLogo from "./ChaiLogo.js"
-import RandomUserShimmer from "./RandomUserShimmer.js"
+import RandomUserShimmer from "./Shimmer/RandomUserShimmer.js"
 
 function ProfileCard() {
   const [userData, setUserData] = useState(null)

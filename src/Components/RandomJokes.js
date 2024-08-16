@@ -10,6 +10,7 @@ import { FaRegComment } from "react-icons/fa6"
 import { BsThreeDots } from "react-icons/bs"
 import { LuCopyright } from "react-icons/lu"
 import { generateRandomData } from "../utility/helpers"
+import RandomJokesShimmer from "./Shimmer/RandomJokesShimmer"
 
 function RandomJokes() {
   const [joke, setJoke] = useState("")
@@ -40,8 +41,8 @@ function RandomJokes() {
     setComment(c)
     setSaved(s)
   }, [])
-  if (joke === "") {
-    return <div>Loading</div>
+  if (joke === '') {
+    return <RandomJokesShimmer/>
   }
   return (
     <div className="w-[524px]  max-auto rounded-xl bg-black drop-shadow font-inter p-5 text-white space-y-2">
