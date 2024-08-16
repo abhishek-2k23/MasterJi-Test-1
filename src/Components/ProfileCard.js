@@ -14,7 +14,11 @@ import RandomUserShimmer from "./Shimmer/RandomUserShimmer.js"
 function ProfileCard() {
   const [userData, setUserData] = useState(null)
   const [countryCode, setCountryCode] = useState("")
+  const [loading, setLoading] = useState(false);
+
   const loadUser = async () => {
+
+    setLoading(true);
     const res = await fetch(
       "https://api.freeapi.app/api/v1/public/randomusers/user/random",
     )
@@ -22,14 +26,13 @@ function ProfileCard() {
 
     //set the user data
     setUserData(userdata?.data)
-
+    setLoading(false);
     if (userData?.data) {
         const code = getCountryCode(userData?.location?.country)
         console.log(code);
         setCountryCode(code)
     }
 
-    console.log(userdata)
   }
 
   const loadNewTab = () => {
@@ -54,7 +57,7 @@ const getCountryCode = async(countryName) =>{
     }
   }, [userData])
 
-  if (userData === null) {
+  if (userData === null || loading) {
     return <RandomUserShimmer/>
   }
   return (
